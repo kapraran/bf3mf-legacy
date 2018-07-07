@@ -1,0 +1,36 @@
+###### ERRORS ######
+
+error/1 = (mysql.php:53) -> mysql error
+error/1 = (login.php:53) -> mysql error
+error/2 = cannot acces page because user is already logged in
+
+-error count- login    : 5
+-error count- register : 8
+-error count- create   : 16
+
+###### remember ######
+
+icons : http://wefunction.com/2008/07/function-free-icon-set/
+flags : 
+
+Otan kanw validate na to kanw mesw function pou 8a to pernaw sto config.php $MODE_PARAMETERS_VALIDATION
+
+POREIA KATA TI DIMIOURGIA NEOU MODE
+	1) Pros8iki mode sto mode list (config.php)
+	2) Pros8iki parametrwn mode sto mode list parameters (config.php)
+	3) Se periptwsi pou apetei login pros8iki sto analogo function (functions.php)
+	4) Se periptwsi pou apetei na fortosei kapoio arxeio, pros8iki sto analogo function (functions.php)
+
+
+###### TO DO LIST ######
+
+- na pros8esw to presentation kai to website sto controlpanel
+- sto match.php na fenete i swsti simaia, prosoxi sto none country code
+- secid validation sto "Accept Challenge"
+- implement password change
+- implement 'can't remember password' to login page
+- na diorthwsw to get_clan_info (functions.php). Otan exei error to mysql na me petaei eksw oxi na epistrefei false
+- na tsekarw pou borei na exei epireasei to challenge_status (match.php) giati nmz oti sou dine genika to status sou alla telika
+	sou dinei to status se sxesi me ton xristi. ANTIKATASTASI ME TO check_if_accepted
+- check length of message message.php
+- add success message message.php
