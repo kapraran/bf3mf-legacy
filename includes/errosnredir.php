@@ -325,7 +325,7 @@ function redirectHTML($link)
 
     $html = "<html>
                         <head>
-                            <meta HTTP-EQUIV='REFRESH' content='0; url={$DIR}{$link}'>
+                            <meta HTTP-EQUIV='REFRESH' content='0; url=/{$link}'>
                             <title>Redirecting...</title>
                             <style type='text/css'>
                                 h1 {
@@ -340,7 +340,7 @@ function redirectHTML($link)
 
                             <h1>Loading...</h1>
                             <script type='text/javascript'>
-                                window.location = '{$DIR}{$link}';
+                                window.location = '/{$link}';
                             </script>
                         </body>
                     </html>";

@@ -11,19 +11,18 @@ if ($LOGGED && $_SESSION['country'] == 'none') {
 <html>
     <head>
         <meta charset="UTF-8" />
-        <base href="http://localhost/aptana/BF3matchfinder/" />
         <title>Battlefield 3 : Quick match | Make your life in battlefield easier and funnier!</title>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="res/style.css" />
-        <link rel="shortcut icon" href="img/fav.png">
+        <link rel="stylesheet" href="/res/style.css" />
+        <link rel="shortcut icon" href="/img/fav.png">
     </head>
     <body>
         <div id="container">
 
             <header>
 
-                <div id="logo"><a href="./"></a></div>
+                <div id="logo"><a href="/"></a></div>
 
             </header>
 
@@ -31,27 +30,27 @@ if ($LOGGED && $_SESSION['country'] == 'none') {
 
                 <div class="banner-cont">
                     <div class="banner big">
-                        <div class="bg" style="background-image:url(img/1.jpg)"></div>
-                        <div class="hl" style="background-image:url(img/1t.png)"></div>
+                        <div class="bg" style="background-image:url(/img/1.jpg)"></div>
+                        <div class="hl" style="background-image:url(/img/1t.png)"></div>
 
                         <div class="title" style="right:0">Find a match</div>
-                        <a href="./find"></a>
+                        <a href="/find"></a>
                     </div>
                 </div>
                 <div class="banner-cont">
                     <div class="banner big">
-                        <div class="bg" style="background-image:url(img/2.jpg)"></div>
-                        <div class="hl" style="background-image:url(img/2t.png)"></div>
+                        <div class="bg" style="background-image:url(/img/2.jpg)"></div>
+                        <div class="hl" style="background-image:url(/img/2t.png)"></div>
 
                         <div class="title" style="right:0">Create a match</div>
-                        <a href="./create"></a>
+                        <a href="/create"></a>
                     </div>
                 </div>
                 <div class="banner-cont last">
 
                     <?php if ($LOGGED): ?>
 
-                    <div class="banner big no-cur" style="background-image:url(img/5.jpg)">
+                    <div class="banner big no-cur" style="background-image:url(/img/5.jpg)">
 
                         <div id="b-i">
 
@@ -72,10 +71,10 @@ if ($LOGGED && $_SESSION['country'] == 'none') {
 
                         <div id="menu">
                             <div class="button">
-                                <a href="./controlpanel"></a>
+                                <a href="/controlpanel"></a>
                             </div>
                             <div class="button" style="background-position: -75px 0">
-                                <a href="./notifications"></a>
+                                <a href="/notifications"></a>
                                 <?php
 $nav_notif_count = unread_notifications();
 if ($nav_notif_count > 0):
@@ -84,10 +83,10 @@ if ($nav_notif_count > 0):
                                 <?php endif;?>
                             </div>
                             <div class="button" style="background-position: -150px 0">
-                                <a href="./mymatches"></a>
+                                <a href="/mymatches"></a>
                             </div>
                             <div class="button" style="background-position: -225px 0">
-                                <a href="./logout"></a>
+                                <a href="/logout"></a>
                             </div>
                         </div>
 
@@ -95,13 +94,13 @@ if ($nav_notif_count > 0):
 
                     <?php else: ?>
 
-                    <div class="banner small top" style="background-image:url(img/3.jpg)">
+                    <div class="banner small top" style="background-image:url(/img/3.jpg)">
                         <div class="title" style="bottom:0;right:0">Login</div>
-                        <a href="./?mode=login"></a>
+                        <a href="/?mode=login"></a>
                     </div>
-                    <div class="banner small" style="background-image:url(img/4.jpg)">
+                    <div class="banner small" style="background-image:url(/img/4.jpg)">
                         <div class="title" style="bottom:0;right:0">Register</div>
-                        <a href="./?mode=register"></a>
+                        <a href="/?mode=register"></a>
                     </div>
 
                     <?php endif;?>
