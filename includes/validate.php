@@ -38,9 +38,10 @@ function valid_sregister($pars)
         redirectHTML('register/error/8');
     }
 
-    if (!(strlen($pars['recaptcha_response_field']) > 0) || !(strlen($pars['recaptcha_challenge_field']) > 0)) {
-        redirectHTML('register/error/9');
-    }
+    // disable recaptcha
+    // if (!(strlen($pars['recaptcha_response_field']) > 0) || !(strlen($pars['recaptcha_challenge_field']) > 0)) {
+    //     redirectHTML('register/error/9');
+    // }
 
     return $pars;
 }

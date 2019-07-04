@@ -100,12 +100,13 @@ $MODE_LIST_PARAMETERS = array(
             'required' => true,
             'type' => 'post',
         ),
+        // disable recaptcha...
         'recaptcha_challenge_field' => array(
-            'required' => true,
+            'required' => false,
             'type' => 'post',
         ),
         'recaptcha_response_field' => array(
-            'required' => true,
+            'required' => false,
             'type' => 'post',
         ),
     ),

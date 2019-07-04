@@ -9,15 +9,15 @@ if (!$MYSQL->unique(get_parameter('email'), 'email') || !$MYSQL->unique(strtolow
 }
 
 // check reCaptcha
-$privatekey = "6LeAnNISAAAAAEEUE6FDRC4zBR-KudApmodkqlUp";
-$resp = recaptcha_check_answer($privatekey,
-    $_SERVER["REMOTE_ADDR"],
-    $MODE_PARS["recaptcha_challenge_field"],
-    $MODE_PARS["recaptcha_response_field"]);
+// $privatekey = "6LeAnNISAAAAAEEUE6FDRC4zBR-KudApmodkqlUp";
+// $resp = recaptcha_check_answer($privatekey,
+//     $_SERVER["REMOTE_ADDR"],
+//     $MODE_PARS["recaptcha_challenge_field"],
+//     $MODE_PARS["recaptcha_response_field"]);
 
-if (!$resp->is_valid) {
-    redirectHTML('register/error/10');
-}
+// if (!$resp->is_valid) {
+//     redirectHTML('register/error/10');
+// }
 
 $MODE_PARS['password'] = si_encrypt($MODE_PARS['password']);
 $name_down = strtolower($MODE_PARS['clanname']);
