@@ -118,9 +118,7 @@ function validate_create_match($pars)
 
   // start year
   if (
-    $pars['start_year'] == 'none' ||
-    $pars['start_year'] > 2013 ||
-    $pars['start_year'] < 2012
+    $pars['start_year'] == 'none'
   ) {
     redirectHTML('create/error/4');
   }
@@ -308,9 +306,7 @@ function validate_find_match($pars)
 
   // start year
   if (
-    $pars['start_year'] == 'none' ||
-    $pars['start_year'] > 2013 ||
-    $pars['start_year'] < 2012
+    $pars['start_year'] == 'none'
   ) {
     redirectHTML('find/error/2');
   }

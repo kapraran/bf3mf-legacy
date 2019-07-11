@@ -4,7 +4,7 @@ class Mysql
 {
   private $username = 'root';
   private $password = 'root';
-  private $host = 'localhost';
+  private $host = '127.0.0.1';
   private $db = 'bf3mf';
   private $link;
 
@@ -74,6 +74,14 @@ class Mysql
     } else {
       return true;
     }
+  }
+
+  public function last_error() {
+    echo mysqli_error($this->link);
+  }
+
+  public function last_id() {
+    return mysqli_insert_id($this->link);
   }
 
   public function close()

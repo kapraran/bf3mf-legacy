@@ -348,7 +348,7 @@ function get_clan_info($id)
 
   $r = $MYSQL->query("SELECT * FROM clans WHERE id = {$id}", true);
   if ($r !== false && mysqli_num_rows($r) > 0) {
-    return mysql_fetch_array($r);
+    return mysqli_fetch_array($r);
   } else {
     return false;
   }

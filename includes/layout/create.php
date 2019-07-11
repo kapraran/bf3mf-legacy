@@ -14,7 +14,7 @@
 
   <?php endif; ?>
 
-  <form action="./submitcreate" method="post">
+  <form action="/submitcreate" method="post">
 
     <div class="whiteblock">
 
@@ -37,8 +37,9 @@
           </select>
           <select name="start_year">
             <option value="none">Y</option>
-            <option value="2012">2012</option>
-            <option value="2013">2013</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
           </select>
           <select name="start_hour">
             <option value="none">Hr</option>
@@ -144,7 +145,8 @@
         <div class="divider"></div> <!-- divider -->
 
         <?php // generate map options html
-        $map_options = generate_map_options(false); ?>
+// generate map options html
+?> <? $map_options = generate_map_options(false); ?>
 
         <div class="row">
           <div class="b3">

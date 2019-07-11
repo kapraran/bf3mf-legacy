@@ -17,7 +17,7 @@ function get_clan_info($id)
   if (mysqli_num_rows($r) < 1) {
     die('Error #5');
   } else {
-    return mysql_fetch_array($r);
+    return mysqli_fetch_array($r);
   }
 }
 

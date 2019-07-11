@@ -6,8 +6,8 @@
                     <div id="errormsg">
 
                         <?php display_msg(
-                          'error',
-                          get_parameter('errorcode')
+                            'error',
+                            get_parameter('errorcode')
                         ); ?>
 
                     </div>

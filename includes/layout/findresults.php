@@ -209,7 +209,7 @@ if ($M_num_mysql_results > 0) {
                     </tr>
 
                     <?php while (
-                      $match_info = mysql_fetch_array($results_display)
+                      $match_info = mysqli_fetch_array($results_display)
                     ):
                       $this_match_clan = $MATCH->clan_info(
                         $match_info['clan_id']

@@ -59,7 +59,7 @@ $notification_content =
   '">match #' .
   $MODE_PARS['matchid'] .
   '</a>';
-while ($clan_id_array = mysql_fetch_array($clan_id_res)) {
+while ($clan_id_array = mysqli_fetch_array($clan_id_res)) {
   add_notification(
     $notification_content,
     $_SESSION['id'],

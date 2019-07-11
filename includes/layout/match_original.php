@@ -370,7 +370,8 @@ $V_premium = ucfirst($match_info['dlc_own']);
             </table><!-- END OF CLAN INFO TABLE -->
 
             <?php // Generates the whole html!
-            $MATCH->generate_match_opponent($MODE_PARS['id']); ?>
+// Generates the whole html!
+?>$MATCH->generate_match_opponent($MODE_PARS['id']); ?>
 
         </div>
 

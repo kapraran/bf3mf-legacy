@@ -10,7 +10,7 @@ if (!$q) {
 } elseif (mysqli_num_rows($q) < 1) {
   redirectHTML('login/error/4');
 } else {
-  $ar = mysql_fetch_array($q);
+  $ar = mysqli_fetch_array($q);
 
   if ($ar['password'] === si_encrypt(get_parameter('password'))) {
     // Operations to login

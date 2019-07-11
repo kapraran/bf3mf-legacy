@@ -11,6 +11,7 @@ if (is_numeric(get_parameter('page'))) {
 $query = "SELECT * FROM notifications WHERE to_id = {$_SESSION['id']}";
 $q = $MYSQL->query($query);
 if (!$q) {
+  die('notif/error/2');
   redirectHTML('error/1');
 }
 
@@ -61,7 +62,7 @@ $MIN_ID = 0;
                     </tr>
 
                     <?php
-                    while ($notifs = mysql_fetch_array($display_q)): ?>
+                    while ($notifs = mysqli_fetch_array($display_q)): ?>
 
                     <tr class="notif<?php echo $notifs['opened'] == 0
                       ? ' unread'

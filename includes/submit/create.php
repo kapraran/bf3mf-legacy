@@ -30,6 +30,6 @@ $r = $MYSQL->query("INSERT INTO matches (clan_name,clan_id,active,
 if (!$r) {
   redirectHTML('error/1');
 } else {
-  $lastid = mysql_insert_id();
+  $lastid = $MYSQL->last_id();
   redirectHTML('match/' . $lastid);
 }

@@ -75,7 +75,7 @@ class Match
 
     $r = $MYSQL->query("SELECT * FROM matches WHERE id = {$id}", true);
     if ($r !== false && mysqli_num_rows($r) > 0) {
-      return mysql_fetch_array($r);
+      return mysqli_fetch_array($r);
     } else {
       redirectHTML('error/6');
     }
@@ -90,7 +90,7 @@ class Match
 
     $r = $MYSQL->query("SELECT * FROM clans WHERE id = {$id}", true);
     if ($r !== false && mysqli_num_rows($r) > 0) {
-      return mysql_fetch_array($r);
+      return mysqli_fetch_array($r);
     } else {
       redirectHTML('error/7');
     }
@@ -170,7 +170,7 @@ class Match
       return '';
     }
 
-    $clan_id = mysql_fetch_array($q);
+    $clan_id = mysqli_fetch_array($q);
     $clan_info = get_clan_info($clan_id['from_clan_id']);
 
     if ($clan_info !== false) {
@@ -270,7 +270,7 @@ class Match
     if (!$r) {
       redirectHTML('error/1');
     } else {
-      $temp = mysql_fetch_array($r);
+      $temp = mysqli_fetch_array($r);
       if ($temp['accepted'] == 1) {
         if ($html) {
           echo '<span class="acc">ACCEPTED</span>';
@@ -323,7 +323,7 @@ class Match
     if (!$r) {
       redirectHTML('error/1');
     } else {
-      while ($temp = mysql_fetch_array($r)) {
+      while ($temp = mysqli_fetch_array($r)) {
         $clan_info = $this->clan_info($temp['from_clan_id']);
 
         $array[$temp['from_clan_name']]['name'] = $temp['from_clan_name'];
@@ -347,7 +347,7 @@ class Match
       redirectHTML('error/1');
     }
 
-    while ($notif_ar = mysql_fetch_array($q)) {
+    while ($notif_ar = mysqli_fetch_array($q)) {
       add_notification(
         "<b>Match #{$mid}</b> deleted by <b>{$_SESSION['name']}</b>. Your challenge for <b>match #{$mid}</b> does no longer exist",
         $_SESSION['id'],
@@ -374,7 +374,7 @@ class Match
       redirectHTML('error/8');
     }
 
-    return mysql_fetch_array($q);
+    return mysqli_fetch_array($q);
   }
 
   public function reject_other_challenges_than($cid, $matchid)
