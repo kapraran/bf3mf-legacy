@@ -2,10 +2,10 @@
 // Calculate render time ------------------------
 function utime()
 {
-    $time = explode(" ", microtime());
-    $usec = (double) $time[0];
-    $sec = (double) $time[1];
-    return $sec + $usec;
+  $time = explode(' ', microtime());
+  $usec = (float) $time[0];
+  $sec = (float) $time[1];
+  return $sec + $usec;
 }
 $RENDER_START = utime();
 //-----------------------------------------------
@@ -14,11 +14,11 @@ $RENDER_START = utime();
 session_start();
 
 // load important resourses
-include "includes/config.php";
-include "includes/mysql.php";
-include "includes/functions.php";
-include "includes/errosnredir.php";
-include "includes/validate.php";
+include 'includes/config.php';
+include 'includes/mysql.php';
+include 'includes/functions.php';
+include 'includes/errosnredir.php';
+include 'includes/validate.php';
 
 // Mysql connect
 $MYSQL = new Mysql();
@@ -29,10 +29,10 @@ $MODE_PARS = validate_parameters(mode_parameters($MODE));
 
 // check if user is logged
 $LOGGED = is_logged();
-$USER = ($LOGGED) ? true : false;
+$USER = $LOGGED ? true : false;
 
 // build the layout
-include "includes/init.php";
+include 'includes/init.php';
 
 // Ending operations
 $MYSQL->close();

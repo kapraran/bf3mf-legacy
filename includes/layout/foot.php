@@ -1,14 +1,15 @@
 
 <?php
-
 $RENDER_END = utime();
 $RENDER_DIF = $RENDER_END - $RENDER_START;
-
 ?>
-        <div id="render-time" style="color:white;padding:10px 0 5px;font-size:11px"> Time to render <?php echo number_format($RENDER_DIF, 3); ?>s, <?php echo $MYSQL->queries; ?> queries in total</div>
+        <div id="render-time" style="color:white;padding:10px 0 5px;font-size:11px"> Time to render <?php echo number_format(
+          $RENDER_DIF,
+          3
+        ); ?>s, <?php echo $MYSQL->queries; ?> queries in total</div>
         </div><!-- container -->
 
-        <div id="feedback-btn" data-plugin="jpopup" data-height="250" data-width="400" data-type="ajax" data-typevalue="res/html/feedback.html" ></div>
+        <div id="feedback-btn" data-plugin="jpopup" data-height="250" data-width="400" data-type="ajax" data-typevalue="/res/html/feedback.html" ></div>
 
         <!-- jpopup -->
         <div id="jpopup-ov" style="display:none"></div>
@@ -86,10 +87,10 @@ $RENDER_DIF = $RENDER_END - $RENDER_START;
 
                 // aply dimensions,margins
                 jpC.css({
-                    'width'				: w,
-                    'height'			: h + 24, // 24px for the handler
-                    'margin-left' : - ( (w/2) + 1 ),
-                    'margin-top'  : - ( (h/2) + 1 )
+                    'width'         : w,
+                    'height'        : h + 24, // 24px for the handler
+                    'margin-left'   : - ( (w/2) + 1 ),
+                    'margin-top'    : - ( (h/2) + 1 )
                 })
 
                 // display jpopup

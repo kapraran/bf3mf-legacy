@@ -7,7 +7,7 @@
 
     <div id="notification" class="error" >
 
-        <?php display_msg('create', get_parameter('errorcode'));?>
+        <?php display_msg('create', get_parameter('errorcode')); ?>
 
     </div>
 
@@ -15,11 +15,11 @@
 
     <div id="notification" class="success" >
 
-        <?php display_msg('create', 0);?>
+        <?php display_msg('create', 0); ?>
 
     </div>
 
-    <?php endif;?>
+    <?php endif; ?>
 
     <form action="./findresults" method="post">
 
@@ -33,14 +33,18 @@
                     <div class="inlabel">From</div> <select name="start_day">
                                  <option value="none">D</option>
                                  <?php for ($i = 1; $i <= 31; $i++): ?>
-                                 <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
-                                 <?php endfor;?>
+                                 <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?></option>
+                                 <?php endfor; ?>
                              </select>
                              <select name="start_month">
                                  <option value="none">M</option>
                                  <?php for ($i = 1; $i <= 12; $i++): ?>
-                                 <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
-                                 <?php endfor;?>
+                                 <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?></option>
+                                 <?php endfor; ?>
                              </select>
                              <select name="start_year">
                                  <option value="none">Y</option>
@@ -50,14 +54,18 @@
                              <select name="start_hour">
                                  <option value="none">Hr</option>
                                  <?php for ($i = 0; $i <= 23; $i++): ?>
-                                 <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
-                                 <?php endfor;?>
+                                 <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?></option>
+                                 <?php endfor; ?>
                              </select> :
                              <select name="start_min">
                                  <option value="none">Mi</option>
                                  <?php for ($i = 0; $i <= 59; $i = $i + 5): ?>
-                                 <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
-                                 <?php endfor;?>
+                                 <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?></option>
+                                 <?php endfor; ?>
                              </select>
                 </div>
 
@@ -65,14 +73,18 @@
                     <div class="inlabel">Until</div> <select name="end_day">
                                  <option value="none">D</option>
                                  <?php for ($i = 1; $i <= 31; $i++): ?>
-                                 <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
-                                 <?php endfor;?>
+                                 <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?></option>
+                                 <?php endfor; ?>
                              </select>
                              <select name="end_month">
                                  <option value="none">M</option>
                                  <?php for ($i = 1; $i <= 12; $i++): ?>
-                                 <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
-                                 <?php endfor;?>
+                                 <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?></option>
+                                 <?php endfor; ?>
                              </select>
                              <select name="end_year">
                                  <option value="none">Y</option>
@@ -82,14 +94,18 @@
                              <select name="end_hour">
                                  <option value="none">Hr</option>
                                  <?php for ($i = 0; $i <= 23; $i++): ?>
-                                 <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
-                                 <?php endfor;?>
+                                 <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?></option>
+                                 <?php endfor; ?>
                              </select> :
                              <select name="end_min">
                                  <option value="none">Mi</option>
                                  <?php for ($i = 0; $i <= 59; $i = $i + 5): ?>
-                                 <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
-                                 <?php endfor;?>
+                                 <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?></option>
+                                 <?php endfor; ?>
                              </select>
                 </div>
 
@@ -168,7 +184,9 @@
 
 
     <!-- HIDDEN FORM ELEMENTS -->
-    <input type="hidden" name="secid" value="<?php echo $_SESSION['secid']; ?>" />
+    <input type="hidden" name="secid" value="<?php echo $_SESSION[
+      'secid'
+    ]; ?>" />
     </form>
 
 </div>

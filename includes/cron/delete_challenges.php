@@ -9,6 +9,6 @@ $dc = $MYSQL->query('DELETE FROM challenges
                             id = challenges.match_id
                        )');
 if (!$dc) {
-    _log('Error: delete_challenges.php');
-    die();
+  _log('Error: delete_challenges.php');
+  die();
 }

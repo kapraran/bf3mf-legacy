@@ -1,7 +1,7 @@
 <?php
 include 'includes/functions_ajax.php';
 if (!isAjax()) {
-    die('Error #1');
+  die('Error #1');
 }
 
 include 'includes/mysql.php';
@@ -10,43 +10,40 @@ $MYSQL = new Mysql();
 $MODE = _get('mode', '');
 $MODE_array = array('zero_index', 'clan', 'msg');
 if (!array_search($MODE, $MODE_array)) {
-    die('Error #2');
+  die('Error #2');
 }
 
 if ($MODE == 'clan') {
-    $CID = _get('cid', 1);
+  $CID = _get('cid', 1);
 
-    if (!is_numeric($CID)) {
-        die('Error #3');
-    } else {
-        $CID = number_format($CID, 0);
-    }
+  if (!is_numeric($CID)) {
+    die('Error #3');
+  } else {
+    $CID = number_format($CID, 0);
+  }
 
-    $CLAN_info = get_clan_info($CID);
+  $CLAN_info = get_clan_info($CID);
 
-    $secid = _get('secid', false);
-    if ($secid === false) {
-        die('Error #6');
-    }
-
+  $secid = _get('secid', false);
+  if ($secid === false) {
+    die('Error #6');
+  }
 } elseif ($MODE == 'msg') {
-    $CID = _get('cid', 1);
+  $CID = _get('cid', 1);
 
-    if (!is_numeric($CID)) {
-        die('Error #3');
-    } else {
-        $CID = number_format($CID, 0);
-    }
+  if (!is_numeric($CID)) {
+    die('Error #3');
+  } else {
+    $CID = number_format($CID, 0);
+  }
 
-    $CLAN_info = get_clan_info($CID);
+  $CLAN_info = get_clan_info($CID);
 
-    $secid = _get('secid', false);
-    if ($secid === false) {
-        die('Error #6');
-    }
-
+  $secid = _get('secid', false);
+  if ($secid === false) {
+    die('Error #6');
+  }
 }
-
 ?>
 
 <?php if ($MODE == 'clan'): ?>
@@ -60,11 +57,17 @@ if ($MODE == 'clan') {
 			</div>
 
 			<div id="ajax-c-i-name-t-o-cont" style="float:left;padding:5px 0 0 0">
-				<div id="ajax-c-i-name" style="color:#343434;font-size:24px;"><?php echo $CLAN_info['name']; ?></div>
+				<div id="ajax-c-i-name" style="color:#343434;font-size:24px;"><?php echo $CLAN_info[
+      'name'
+    ]; ?></div>
 				<div id="ajax-c-i-ri" style="color:#5C5C5C;font-size:14px" >
 					[<?php echo $CLAN_info['tag']; ?>]
-					<span class="ajax-country-i" style="margin-left:10px;"><img src="img/flags/<?php echo $CLAN_info['country']; ?>.png" /></span>
-					<span class="ajax-country"><?php echo $COUNTRIES[$CLAN_info['country']]; ?></span>
+					<span class="ajax-country-i" style="margin-left:10px;"><img src="img/flags/<?php echo $CLAN_info[
+       'country'
+     ]; ?>.png" /></span>
+					<span class="ajax-country"><?php echo $COUNTRIES[
+       $CLAN_info['country']
+     ]; ?></span>
 					<span class="clan-profile-popup" data-plugin="jpopup" data-height="310" data-width="470" data-type="ajax" data-typevalue="ajax.php?mode=msg&cid=<?php echo $CID; ?>&secid=<?php echo $secid; ?>">send message</span>
 				</div>
 			</div>
@@ -90,7 +93,9 @@ if ($MODE == 'clan') {
 			</tr>
 			<tr>
 				<td style="font-size:15px;padding-bottom:12px">
-					<input style="margin:0;border:1px solid #E8E8E8;padding:4px 2px;font-size:15px;color:#343434;width:468px" type="text" readonly="readonly" value="<?php echo $CLAN_info['battlelog']; ?>" />
+					<input style="margin:0;border:1px solid #E8E8E8;padding:4px 2px;font-size:15px;color:#343434;width:468px" type="text" readonly="readonly" value="<?php echo $CLAN_info[
+       'battlelog'
+     ]; ?>" />
 				</td>
 			</tr>
 			<tr>
@@ -98,7 +103,9 @@ if ($MODE == 'clan') {
 			</tr>
 			<tr>
 				<td style="font-size:15px;padding-bottom:12px">
-					<input style="margin:0;border:1px solid #E8E8E8;padding:4px 2px;font-size:15px;color:#343434;width:468px" type="text" readonly="readonly" value="<?php echo $CLAN_info['battlelog']; ?>" />
+					<input style="margin:0;border:1px solid #E8E8E8;padding:4px 2px;font-size:15px;color:#343434;width:468px" type="text" readonly="readonly" value="<?php echo $CLAN_info[
+       'battlelog'
+     ]; ?>" />
 				</td>
 			</tr>
 
@@ -144,7 +151,9 @@ if ($MODE == 'clan') {
 				$.ajax({
 					url : './submitmessage',
 					type : 'post',
-					data : 'clanid=<?php echo $CLAN_info['id']; ?>&secid=<?php echo $secid; ?>&message=' + $('textarea[name=message]').val(),
+					data : 'clanid=<?php echo $CLAN_info[
+       'id'
+     ]; ?>&secid=<?php echo $secid; ?>&message=' + $('textarea[name=message]').val(),
 					success : function (d){
 						if( $.trim(d) == 'sent' ){
 							notif('Message sent!');
@@ -158,4 +167,4 @@ if ($MODE == 'clan') {
 		</script>
 
 	</div>
-<?php endif;?>
+<?php endif; ?>

@@ -1,8 +1,6 @@
 <?php
 
-$MATCH = new Match();
-
-?>
+$MATCH = new Match(); ?>
 <div id="main">
     <div class="mode-title">My matches</div>
 
@@ -76,7 +74,7 @@ $MATCH = new Match();
 
             <?php else: ?>
                 You have no matches
-            <?php endif;?>
+            <?php endif; ?>
 
 
 

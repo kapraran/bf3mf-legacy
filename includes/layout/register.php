@@ -1,10 +1,8 @@
 <?php
 
 if ($LOGGED) {
-    redirectHTML('error/2');
-}
-
-?>
+  redirectHTML('error/2');
+} ?>
             <div id="main">
                 <div class="mode-title">Register</div>
 
@@ -12,7 +10,10 @@ if ($LOGGED) {
 
                 <div id="notification" class="error" >
 
-                    <?php display_msg('register', get_parameter('errorcode'));?>
+                    <?php display_msg(
+                      'register',
+                      get_parameter('errorcode')
+                    ); ?>
 
                 </div>
 
@@ -20,15 +21,15 @@ if ($LOGGED) {
 
                 <div id="notification" class="success" >
 
-                    <?php display_msg('register', 0);?>
+                    <?php display_msg('register', 0); ?>
 
                 </div>
 
-                <?php endif;?>
+                <?php endif; ?>
 
                 <div id="form" class="login-form form">
 
-                    <form action="./?mode=submitregister" method="post">
+                    <form action="/?mode=submitregister" method="post">
 
                         <table id="l-f-table">
                             <tr>
@@ -41,7 +42,7 @@ if ($LOGGED) {
                                 <td class="label">Password :</td>
                             </tr>
                             <tr>
-                                <td class="input"><input type="password" name="password" required="required"/> <a href="res/tooltip/register_password.htm?width=380" class="jTip" id="one" name="Password must follow these rules:">?</a></td>
+                                <td class="input"><input type="password" name="password" required="required"/> <a href="/res/tooltip/register_password.htm?width=380" class="jTip" id="one" name="Password must follow these rules:">?</a></td>
                             </tr>
                             <tr>
                                 <td class="label">Retype password :</td>
@@ -67,17 +68,16 @@ if ($LOGGED) {
                             <tr>
                                 <td class="input"><textarea maxlength="256" required="required" name="claninfo" placeholder=""></textarea></td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td class="label">Are you a human?</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td class="input">
                                     <?php
-
-$publickey = "6LeAnNISAAAAAAg_g-dram812VUe9Rr6s6rOr4tF";
-echo recaptcha_get_html($publickey);
-
-?>
+                                    $publickey =
+                                      '6LeAnNISAAAAAAg_g-dram812VUe9Rr6s6rOr4tF';
+                                    echo recaptcha_get_html($publickey);
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
@@ -91,7 +91,7 @@ echo recaptcha_get_html($publickey);
 
             </div>
 
-            <script type="text/javascript" src="res/tooltip/js/jtip.js"></script>
+            <script type="text/javascript" src="/res/tooltip/js/jtip.js"></script>
             <script type="text/javascript">
                 var f = document;
             var head  = f.getElementsByTagName('head')[0];

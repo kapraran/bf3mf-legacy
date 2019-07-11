@@ -1,12 +1,12 @@
 <div id="main">
   <div class="mode-title">Create a Match</div>
-  <?php if (get_parameter('success') == 'error') : ?>
+  <?php if (get_parameter('success') == 'error'): ?>
 
     <div id="notification" class="error">
       <?php display_msg('create', get_parameter('errorcode')); ?>
     </div>
 
-  <?php elseif (get_parameter('success') == 'success') : ?>
+  <?php elseif (get_parameter('success') == 'success'): ?>
 
     <div id="notification" class="success">
       <?php display_msg('create', 0); ?>
@@ -25,13 +25,13 @@
         <div class="input">
           <div class="inlabel">From</div> <select name="start_day">
             <option value="none">D</option>
-            <?php for ($i = 1; $i <= 31; $i++) : ?>
+            <?php for ($i = 1; $i <= 31; $i++): ?>
               <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
             <?php endfor; ?>
           </select>
           <select name="start_month">
             <option value="none">M</option>
-            <?php for ($i = 1; $i <= 12; $i++) : ?>
+            <?php for ($i = 1; $i <= 12; $i++): ?>
               <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
             <?php endfor; ?>
           </select>
@@ -42,13 +42,13 @@
           </select>
           <select name="start_hour">
             <option value="none">Hr</option>
-            <?php for ($i = 0; $i <= 23; $i++) : ?>
+            <?php for ($i = 0; $i <= 23; $i++): ?>
               <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
             <?php endfor; ?>
           </select> :
           <select name="start_min">
             <option value="none">Mi</option>
-            <?php for ($i = 0; $i <= 59; $i = $i + 5) : ?>
+            <?php for ($i = 0; $i <= 59; $i = $i + 5): ?>
               <option value="<?php echo $i; ?>"><?php echo zero($i); ?></option>
             <?php endfor; ?>
           </select>
@@ -57,8 +57,10 @@
         <div class="input">
           <div class="inlabel">Until</div> <select name="time_after">
             <option value="none">Hours after</option>
-            <?php for ($i = 2; $i <= 12; $i++) : ?>
-              <option value="<?php echo $i; ?>"><?php echo zero($i); ?> hours after</option>
+            <?php for ($i = 2; $i <= 12; $i++): ?>
+              <option value="<?php echo $i; ?>"><?php echo zero(
+  $i
+); ?> hours after</option>
             <?php endfor; ?>
           </select>
         </div>
@@ -141,12 +143,8 @@
 
         <div class="divider"></div> <!-- divider -->
 
-        <?php
-
-        // generate map options html
-        $map_options = generate_map_options(false);
-
-        ?>
+        <?php // generate map options html
+        $map_options = generate_map_options(false); ?>
 
         <div class="row">
           <div class="b3">
@@ -197,7 +195,9 @@
 
 
     <!-- HIDDEN FORM ELEMENTS -->
-    <input type="hidden" name="secid" value="<?php echo $_SESSION['secid']; ?>" />
+    <input type="hidden" name="secid" value="<?php echo $_SESSION[
+      'secid'
+    ]; ?>" />
   </form>
 
 </div>

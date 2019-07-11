@@ -1,11 +1,14 @@
 <?php
 
 if ($LOGGED) {
-    redirectHTML('error/2');
+  redirectHTML('error/2');
 }
 
-if (!$MYSQL->unique(get_parameter('email'), 'email') || !$MYSQL->unique(strtolower(get_parameter('clanname')), 'name_down')) {
-    redirectHTML('register/error/7');
+if (
+  !$MYSQL->unique(get_parameter('email'), 'email') ||
+  !$MYSQL->unique(strtolower(get_parameter('clanname')), 'name_down')
+) {
+  redirectHTML('register/error/7');
 }
 
 // check reCaptcha
@@ -22,9 +25,11 @@ if (!$MYSQL->unique(get_parameter('email'), 'email') || !$MYSQL->unique(strtolow
 $MODE_PARS['password'] = si_encrypt($MODE_PARS['password']);
 $name_down = strtolower($MODE_PARS['clanname']);
 
-$q = $MYSQL->query("INSERT INTO clans (name,name_down,tag,email,password,coninfo) VALUES ('{$MODE_PARS['clanname']}','$name_down','{$MODE_PARS['clantag']}','{$MODE_PARS['email']}','{$MODE_PARS['password']}','{$MODE_PARS['claninfo']}')");
+$q = $MYSQL->query(
+  "INSERT INTO clans (name,name_down,tag,email,password,coninfo) VALUES ('{$MODE_PARS['clanname']}','$name_down','{$MODE_PARS['clantag']}','{$MODE_PARS['email']}','{$MODE_PARS['password']}','{$MODE_PARS['claninfo']}')"
+);
 if (!$q) {
-    redirect('register', false, 1);
+  redirect('register', false, 1);
 } else {
-    redirect('register', true);
+  redirect('register', true);
 }

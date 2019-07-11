@@ -1,10 +1,8 @@
 <?php
 
 if ($LOGGED) {
-    redirectHTML('error/2');
-}
-
-?>
+  redirectHTML('error/2');
+} ?>
 
 
             <div id="main">
@@ -14,7 +12,7 @@ if ($LOGGED) {
 
                 <div id="notification" class="error" >
 
-                    <?php display_msg('login', get_parameter('errorcode'));?>
+                    <?php display_msg('login', get_parameter('errorcode')); ?>
 
                 </div>
 
@@ -22,11 +20,11 @@ if ($LOGGED) {
 
                 <div id="notification" class="success" >
 
-                    <?php display_msg('login', 0);?>
+                    <?php display_msg('login', 0); ?>
 
                 </div>
 
-                <?php endif;?>
+                <?php endif; ?>
 
                 <div id="form" class="login-form form">
 
@@ -37,13 +35,19 @@ if ($LOGGED) {
                                 <td class="label">Email :</td>
                             </tr>
                             <tr>
-                                <td class="input"><input type="text" name="email" value="<?php get_parameter('email', true)?>"/></td>
+                                <td class="input"><input type="text" name="email" value="<?php get_parameter(
+                                  'email',
+                                  true
+                                ); ?>"/></td>
                             </tr>
                             <tr>
                                 <td class="label">Password :</td>
                             </tr>
                             <tr>
-                                <td class="input"><input type="password" name="password" value="<?php get_parameter('password', true)?>"/></td>
+                                <td class="input"><input type="password" name="password" value="<?php get_parameter(
+                                  'password',
+                                  true
+                                ); ?>"/></td>
                             </tr>
                             <tr>
                                 <td><button>Submit</button></td>

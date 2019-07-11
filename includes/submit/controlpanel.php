@@ -7,8 +7,8 @@ $q = $MYSQL->query("UPDATE clans SET
                                                 country = '{$MODE_PARS['country']}'
                                                 WHERE id = {$_SESSION['id']}");
 if (!$q) {
-    redirectHTML('error/1');
+  redirectHTML('error/1');
 } else {
-    update_session();
-    redirectHTML('controlpanel/success');
+  update_session();
+  redirectHTML('controlpanel/success');
 }

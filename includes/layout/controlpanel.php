@@ -2,7 +2,6 @@
 
 $MATCH = new Match();
 $clan_info = $MATCH->clan_info($_SESSION['id']);
-
 ?>
 
 <div id="main">
@@ -12,7 +11,7 @@ $clan_info = $MATCH->clan_info($_SESSION['id']);
 
     <div id="notification" class="error" >
 
-        <?php display_msg('controlpanel', get_parameter('errorcode'));?>
+        <?php display_msg('controlpanel', get_parameter('errorcode')); ?>
 
     </div>
 
@@ -20,11 +19,11 @@ $clan_info = $MATCH->clan_info($_SESSION['id']);
 
     <div id="notification" class="success" >
 
-        <?php display_msg('controlpanel', 0);?>
+        <?php display_msg('controlpanel', 0); ?>
 
     </div>
 
-    <?php endif;?>
+    <?php endif; ?>
 
     <div class="whiteblock">
 
@@ -42,7 +41,9 @@ $clan_info = $MATCH->clan_info($_SESSION['id']);
                         </tr>
                         <tr>
                             <td class="input">
-                                <input type="text" value="<?php echo $clan_info['tag'] ?>" name="clantag" class="nice-form" />
+                                <input type="text" value="<?php echo $clan_info[
+                                  'tag'
+                                ]; ?>" name="clantag" class="nice-form" />
                             </td>
                         </tr>
                         <tr>
@@ -50,7 +51,9 @@ $clan_info = $MATCH->clan_info($_SESSION['id']);
                         </tr>
                         <tr>
                             <td class="input">
-                                <input type="text" value="<?php echo $clan_info['avatar'] ?>" name="clanlogo" class="nice-form" />
+                                <input type="text" value="<?php echo $clan_info[
+                                  'avatar'
+                                ]; ?>" name="clanlogo" class="nice-form" />
                             </td>
                         </tr>
                         <tr>
@@ -58,7 +61,9 @@ $clan_info = $MATCH->clan_info($_SESSION['id']);
                         </tr>
                         <tr>
                             <td class="input">
-                                <input type="text" value="<?php echo $clan_info['battlelog'] ?>" name="battlelog" class="nice-form" />
+                                <input type="text" value="<?php echo $clan_info[
+                                  'battlelog'
+                                ]; ?>" name="battlelog" class="nice-form" />
                             </td>
                         </tr>
                         <tr>
@@ -68,9 +73,15 @@ $clan_info = $MATCH->clan_info($_SESSION['id']);
                             <td class="input">
                                 <select name="country" class="nice-form">
                                     <option value="none">Select a country</option>
-                                    <?php foreach ($COUNTRIES as $key => $country): ?>
-                                        <option value="<?php echo $key; ?>" <?php echo ($key == $clan_info['country']) ? ' selected="selected" ' : ''; ?>><?php echo $country; ?></option>
-                                    <?php endforeach;?>
+                                    <?php foreach (
+                                      $COUNTRIES
+                                      as $key => $country
+                                    ): ?>
+                                        <option value="<?php echo $key; ?>" <?php echo $key ==
+$clan_info['country']
+  ? ' selected="selected" '
+  : ''; ?>><?php echo $country; ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                             </td>
                         </tr>
@@ -80,7 +91,9 @@ $clan_info = $MATCH->clan_info($_SESSION['id']);
             </div>
 
             <button class="y-btn">Update Settings</button>
-            <input type="hidden" name="secid" value="<?php echo $_SESSION['secid']; ?>" />
+            <input type="hidden" name="secid" value="<?php echo $_SESSION[
+              'secid'
+            ]; ?>" />
             </form>
 
         </div>

@@ -1,12 +1,10 @@
 <?php
 
 if ($LOGGED && $_SESSION['country'] == 'none') {
-    $c_code = 'GR';
+  $c_code = 'GR';
 } elseif ($LOGGED) {
-    $c_code = $_SESSION['country'];
-}
-
-?>
+  $c_code = $_SESSION['country'];
+} ?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -54,12 +52,20 @@ if ($LOGGED && $_SESSION['country'] == 'none') {
 
                         <div id="b-i">
 
-                            <div id="avatar" style="background-image:url(<?php echo $_SESSION['avatar']; ?>)"></div>
+                            <div id="avatar" style="background-image:url(<?php echo $_SESSION[
+                              'avatar'
+                            ]; ?>)"></div>
 
                             <div id="q-i">
-                                <div id="clan-name"><?php echo $_SESSION['name']; ?></div>
+                                <div id="clan-name"><?php echo $_SESSION[
+                                  'name'
+                                ]; ?></div>
                                 <div id="clan-r-i">
-                                    <span class="tag">[<?php echo $_SESSION['tag']; ?>]</span> <span class="country"> <img src="img/flags/<?php echo $c_code; ?>.png" title="<?php echo $COUNTRIES[$c_code]; ?>" /> <?php echo $COUNTRIES[$c_code]; ?></span>
+                                    <span class="tag">[<?php echo $_SESSION[
+                                      'tag'
+                                    ]; ?>]</span> <span class="country"> <img src="img/flags/<?php echo $c_code; ?>.png" title="<?php echo $COUNTRIES[
+  $c_code
+]; ?>" /> <?php echo $COUNTRIES[$c_code]; ?></span>
                                 </div>
                             </div>
 
@@ -76,11 +82,11 @@ if ($LOGGED && $_SESSION['country'] == 'none') {
                             <div class="button" style="background-position: -75px 0">
                                 <a href="/notifications"></a>
                                 <?php
-$nav_notif_count = unread_notifications();
-if ($nav_notif_count > 0):
-?>
+                                $nav_notif_count = unread_notifications();
+                                if ($nav_notif_count > 0): ?>
                                     <div class="nav-notif-count"><?php echo $nav_notif_count; ?> new</div>
-                                <?php endif;?>
+                                <?php endif;
+                                ?>
                             </div>
                             <div class="button" style="background-position: -150px 0">
                                 <a href="/mymatches"></a>
@@ -103,7 +109,7 @@ if ($nav_notif_count > 0):
                         <a href="/?mode=register"></a>
                     </div>
 
-                    <?php endif;?>
+                    <?php endif; ?>
 
                 </div>
 

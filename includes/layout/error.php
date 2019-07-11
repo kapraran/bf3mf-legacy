@@ -5,7 +5,10 @@
 
                     <div id="errormsg">
 
-                        <?php display_msg('error', get_parameter('errorcode'));?>
+                        <?php display_msg(
+                          'error',
+                          get_parameter('errorcode')
+                        ); ?>
 
                     </div>
 
