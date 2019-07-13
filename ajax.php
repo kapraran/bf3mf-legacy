@@ -117,7 +117,7 @@ if ($MODE == 'clan') {
 <?php elseif ($MODE == 'msg'): ?>
 	<div id="ajax-send-m" style="font-family:Arial,sans-serif;padding:20px;width:430px">
 
-		<!-- <form action="./submitmessage" method="post"> -->
+		<!-- <form action="/submitmessage" method="post"> -->
 		<table id="ajax-send-m-f">
 			<tbody>
 				<tr>
@@ -149,7 +149,7 @@ if ($MODE == 'clan') {
 			$('button').click(sendMsgAjax);
 			function sendMsgAjax(){
 				$.ajax({
-					url : './submitmessage',
+					url : '/submitmessage',
 					type : 'post',
 					data : 'clanid=<?php echo $CLAN_info[
        'id'

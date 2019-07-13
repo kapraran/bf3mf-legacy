@@ -224,7 +224,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
                               $_SESSION['id'] == $clan_info['id']
                             ): ?>
 
-                                <form action='./deletematch/<?php echo $MODE_PARS[
+                                <form action='/deletematch/<?php echo $MODE_PARS[
                                   'id'
                                 ]; ?>' method="post" onsubmit="return conf()">
                                         <input type="hidden" name="secid" value="<?php echo $_SESSION[
@@ -250,7 +250,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
                                     </div>
 
                                 <?php else: ?>
-                                    <form action='./challenge/<?php echo $MODE_PARS[
+                                    <form action='/challenge/<?php echo $MODE_PARS[
                                       'id'
                                     ]; ?>' method="post" onsubmit="return conf()">
                                         <input type="hidden" name="secid" value="<?php echo $_SESSION[
@@ -328,7 +328,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
 ]; ?>]</div>
                                                             </td>
                                                             <td class="accept">
-                                                                <form method="post" action="./acceptchallenge/<?php echo $MODE_PARS[
+                                                                <form method="post" action="/acceptchallenge/<?php echo $MODE_PARS[
                                                                   'id'
                                                                 ]; ?>/<?php echo $chall_info[
   'challenge'
@@ -340,7 +340,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
                                                                 </form>
                                                             </td>
                                                             <td class="decline">
-                                                                <form method="post" action="./declinechallenge/<?php echo $MODE_PARS[
+                                                                <form method="post" action="/declinechallenge/<?php echo $MODE_PARS[
                                                                   'id'
                                                                 ]; ?>/<?php echo $chall_info[
   'challenge'

@@ -478,120 +478,120 @@ $MODE_PARAMETERS_VALIDATION = array(
 $MAP_LIST = array(
   'Caspian Border' => array(
     'name' => 'Caspian Border',
-    'icon' => 'img/maps/icon/caspian.jpg',
-    'img_wide' => 'img/maps/wide/caspian.jpg',
+    'icon' => '/img/maps/icon/caspian.jpg',
+    'img_wide' => '/img/maps/wide/caspian.jpg',
     'game' => 'BF3',
   ),
 
   'Damavand Peak' => array(
     'name' => 'Damavand Peak',
-    'icon' => 'img/maps/icon/damavand.jpg',
-    'img_wide' => 'img/maps/wide/damavand.jpg',
+    'icon' => '/img/maps/icon/damavand.jpg',
+    'img_wide' => '/img/maps/wide/damavand.jpg',
     'game' => 'BF3',
   ),
 
   'Grand Bazaar' => array(
     'name' => 'Grand Bazaar',
-    'icon' => 'img/maps/icon/bazaar.jpg',
-    'img_wide' => 'img/maps/wide/bazaar.jpg',
+    'icon' => '/img/maps/icon/bazaar.jpg',
+    'img_wide' => '/img/maps/wide/bazaar.jpg',
     'game' => 'BF3',
   ),
 
   'Kharg Island' => array(
     'name' => 'Kharg Island',
-    'icon' => 'img/maps/icon/kharg.jpg',
-    'img_wide' => 'img/maps/wide/kharg.jpg',
+    'icon' => '/img/maps/icon/kharg.jpg',
+    'img_wide' => '/img/maps/wide/kharg.jpg',
     'game' => 'BF3',
   ),
 
   'Noshahr Canals' => array(
     'name' => 'Noshahr Canals',
-    'icon' => 'img/maps/icon/canals.jpg',
-    'img_wide' => 'img/maps/wide/canals.jpg',
+    'icon' => '/img/maps/icon/canals.jpg',
+    'img_wide' => '/img/maps/wide/canals.jpg',
     'game' => 'BF3',
   ),
 
   'Seine Crossing' => array(
     'name' => 'Seine Crossing',
-    'icon' => 'img/maps/icon/seine.jpg',
-    'img_wide' => 'img/maps/wide/seine.jpg',
+    'icon' => '/img/maps/icon/seine.jpg',
+    'img_wide' => '/img/maps/wide/seine.jpg',
     'game' => 'BF3',
   ),
 
   'Tehran Highway' => array(
     'name' => 'Tehran Highway',
-    'icon' => 'img/maps/icon/tehran.jpg',
-    'img_wide' => 'img/maps/wide/tehran.jpg',
+    'icon' => '/img/maps/icon/tehran.jpg',
+    'img_wide' => '/img/maps/wide/tehran.jpg',
     'game' => 'BF3',
   ),
 
   'Operation Firestorm' => array(
     'name' => 'Operation Firestorm',
-    'icon' => 'img/maps/icon/op_fire.jpg',
-    'img_wide' => 'img/maps/wide/op_fire.jpg',
+    'icon' => '/img/maps/icon/op_fire.jpg',
+    'img_wide' => '/img/maps/wide/op_fire.jpg',
     'game' => 'BF3',
   ),
 
   'Operation Métro' => array(
     'name' => 'Operation Métro',
-    'icon' => 'img/maps/icon/op_metro.jpg',
-    'img_wide' => 'img/maps/wide/op_metro.jpg',
+    'icon' => '/img/maps/icon/op_metro.jpg',
+    'img_wide' => '/img/maps/wide/op_metro.jpg',
     'game' => 'BF3',
   ),
 
   'Gulf of Oman' => array(
     'name' => 'Gulf of Oman',
-    'icon' => 'img/maps/icon/oman.jpg',
-    'img_wide' => 'img/maps/wide/oman.jpg',
+    'icon' => '/img/maps/icon/oman.jpg',
+    'img_wide' => '/img/maps/wide/oman.jpg',
     'game' => 'B2K',
   ),
 
   'Sharqi Peninsula' => array(
     'name' => 'Sharqi Peninsula',
-    'icon' => 'img/maps/icon/sharqi.jpg',
-    'img_wide' => 'img/maps/wide/sharqi.jpg',
+    'icon' => '/img/maps/icon/sharqi.jpg',
+    'img_wide' => '/img/maps/wide/sharqi.jpg',
     'game' => 'B2K',
   ),
 
   'Strike at Karkand' => array(
     'name' => 'Strike at Karkand',
-    'icon' => 'img/maps/icon/karkand.jpg',
-    'img_wide' => 'img/maps/wide/karkand.jpg',
+    'icon' => '/img/maps/icon/karkand.jpg',
+    'img_wide' => '/img/maps/wide/karkand.jpg',
     'game' => 'B2K',
   ),
 
   'Wake Island' => array(
     'name' => 'Wake Island',
-    'icon' => 'img/maps/icon/wake.jpg',
-    'img_wide' => 'img/maps/wide/wake.jpg',
+    'icon' => '/img/maps/icon/wake.jpg',
+    'img_wide' => '/img/maps/wide/wake.jpg',
     'game' => 'B2K',
   ),
 
   'Ziba Tower' => array(
     'name' => 'Ziba Tower',
-    'icon' => 'img/maps/icon/ziba.jpg',
-    'img_wide' => 'img/maps/wide/ziba.jpg',
+    'icon' => '/img/maps/icon/ziba.jpg',
+    'img_wide' => '/img/maps/wide/ziba.jpg',
     'game' => 'CQ',
   ),
 
   'Donya Fortress' => array(
     'name' => 'Donya Fortress',
-    'icon' => 'img/maps/icon/donya.jpg',
-    'img_wide' => 'img/maps/wide/donya.jpg',
+    'icon' => '/img/maps/icon/donya.jpg',
+    'img_wide' => '/img/maps/wide/donya.jpg',
     'game' => 'CQ',
   ),
 
   'Scrapmetal' => array(
     'name' => 'Scrapmetal',
-    'icon' => 'img/maps/icon/scrap.jpg',
-    'img_wide' => 'img/maps/wide/scrap.jpg',
+    'icon' => '/img/maps/icon/scrap.jpg',
+    'img_wide' => '/img/maps/wide/scrap.jpg',
     'game' => 'CQ',
   ),
 
   'Operation 925' => array(
     'name' => 'Operation 925',
-    'icon' => 'img/maps/icon/op_925.jpg',
-    'img_wide' => 'img/maps/wide/op_925.jpg',
+    'icon' => '/img/maps/icon/op_925.jpg',
+    'img_wide' => '/img/maps/wide/op_925.jpg',
     'game' => 'CQ',
   ),
 );

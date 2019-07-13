@@ -234,7 +234,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
           <tr>
             <td class="label">Challenges sent for this match</td>
           </tr>
-          <?php
+          <?php 
                             $challenge_list = $MATCH->get_challenges(
                                 $MODE_PARS['id']
                             );
@@ -253,21 +253,16 @@ $V_premium = ucfirst($match_info['dlc_own']);
             <td>
               <div class="match-info-block inside-td">
 
-                <?php if (
-                                            $CHALLENGES_STATUS === 'accepted'
-                                        ) : ?>
-                YOU HAVE ACCEPTED AN OPPONENT FOR THIS MATCH
-                <?php elseif (
-                                            $CHALLENGES_STATUS === 'nochallenges'
-                                        ) : ?>
-                NO CHALLENGES SENT YET
+                <?php if ( $CHALLENGES_STATUS === 'accepted' ) : ?>
+                    YOU HAVE ACCEPTED AN OPPONENT FOR THIS MATCH
+                <?php elseif ( $CHALLENGES_STATUS === 'nochallenges' ) : ?>
+                    NO CHALLENGES SENT YET
                 <?php else : ?>
 
                 <table>
                   <tbody>
 
-                    <?php foreach ($challenge_list
-                                                        as $key => $chall_info) : ?>
+                    <?php foreach ($challenge_list as $key => $chall_info) : ?>
 
                     <tr>
                       <td class="clan">
@@ -277,7 +272,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
                       </td>
                       <td class="accept">
                         <form method="post"
-                          action="./acceptchallenge/<?php echo $MODE_PARS['id']; ?>/<?php echo $chall_info['challenge']; ?>"
+                          action="/acceptchallenge/<?php echo $MODE_PARS['id']; ?>/<?php echo $chall_info['challenge']; ?>"
                           onsubmit="return conf()">
                           <input type="hidden" name="secid" value="<?php echo $_SESSION['secid']; ?>" />
                           <button class="y-btn">Accept</button>
@@ -285,7 +280,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
                       </td>
                       <td class="decline">
                         <form method="post"
-                          action="./declinechallenge/<?php echo $MODE_PARS['id']; ?>/<?php echo $chall_info['challenge']; ?>"
+                          action="/declinechallenge/<?php echo $MODE_PARS['id']; ?>/<?php echo $chall_info['challenge']; ?>"
                           onsubmit="return conf()">
                           <input type="hidden" name="secid" value="<?php echo $_SESSION['secid']; ?>" />
                           <button class="y-btn">Decline</button>
@@ -350,7 +345,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
           </tr>
           <tr>
             <td class="value">
-              <form action='./challenge/<?php echo $MODE_PARS['id']; ?>' method="post" onsubmit="return conf()">
+              <form action='/challenge/<?php echo $MODE_PARS['id']; ?>' method="post" onsubmit="return conf()">
                 <input type="hidden" name="secid" value="<?php echo $_SESSION['secid']; ?>" />
                 <button class="y-btn" style="margin:5px 0 0">Send a challenge</button>
               </form>
@@ -369,7 +364,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
       <?php // Generates the whole html!
             // Generates the whole html!
             ?>
-      <? $MATCH->generate_match_opponent($MODE_PARS['id']); ?>
+      <?php $MATCH->generate_match_opponent($MODE_PARS['id']); ?>
 
     </div>
 

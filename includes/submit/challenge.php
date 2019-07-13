@@ -48,7 +48,7 @@ if ($cr === true) {
   add_notification(
     '<b>' .
       $_SESSION['name'] .
-      '</b> sent you a challenge for <a href="./match/' .
+      '</b> sent you a challenge for <a href="/match/' .
       $MODE_PARS['matchid'] .
       '">this match [#' .
       $MODE_PARS['matchid'] .

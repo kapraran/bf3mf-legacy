@@ -54,7 +54,7 @@ $clan_id_res = $MATCH->reject_other_challenges_than(
 $notification_content =
   '<b>' .
   $_SESSION['name'] .
-  '</b> rejected your challenge for <a href="./match/' .
+  '</b> rejected your challenge for <a href="/match/' .
   $MODE_PARS['matchid'] .
   '">match #' .
   $MODE_PARS['matchid'] .
@@ -79,7 +79,7 @@ if (!$q) {
 $notification_content =
   '<b>' .
   $_SESSION['name'] .
-  '</b> accepted your challenge for <a href="./match/' .
+  '</b> accepted your challenge for <a href="/match/' .
   $MODE_PARS['matchid'] .
   '">match #' .
   $MODE_PARS['matchid'] .
@@ -91,4 +91,4 @@ add_notification(
 );
 
 // success
-redirectHTML('./match/' . $MODE_PARS['matchid'] . '/success/40');
+redirectHTML('/match/' . $MODE_PARS['matchid'] . '/success/40');

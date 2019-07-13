@@ -353,9 +353,7 @@ function validate_find_match($pars)
 
   // end year
   if (
-    $pars['end_year'] == 'none' ||
-    $pars['end_year'] > 2013 ||
-    $pars['end_year'] < 2012
+    $pars['end_year'] == 'none'
   ) {
     redirectHTML('find/error/3');
   }

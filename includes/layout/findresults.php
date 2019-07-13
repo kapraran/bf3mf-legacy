@@ -327,7 +327,7 @@ if ($M_num_mysql_results > 0) {
 
                     <div id="pagination">
 
-                        <form action="./findresults" id="pagination_form" method="post">
+                        <form action="/findresults" id="pagination_form" method="post">
                             <input type="hidden" value="<?php echo $MODE_PARS[
                               'start_day'
                             ]; ?>" name="start_day" />
@@ -423,7 +423,7 @@ if ($M_num_mysql_results > 0) {
     }
     function before_submit(n){
         var form = document.getElementById("pagination_form");
-        form.setAttribute('action','./findresults/' + n);
+        form.setAttribute('action','/findresults/' + n);
         return true;
     }
 

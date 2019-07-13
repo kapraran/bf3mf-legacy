@@ -37,9 +37,10 @@
           </select>
           <select name="start_year">
             <option value="none">Y</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
+            <?php for($y = 0; $y<2; $y++): ?>
+            <?php $year = intval(date('Y')) + $y; ?>
+            <option value="<?php echo $year ?>"><?php echo $year ?></option>
+            <?php endfor; ?>
           </select>
           <select name="start_hour">
             <option value="none">Hr</option>
@@ -146,7 +147,7 @@
 
         <?php // generate map options html
 // generate map options html
-?> <? $map_options = generate_map_options(false); ?>
+?> <?php $map_options = generate_map_options(false); ?>
 
         <div class="row">
           <div class="b3">

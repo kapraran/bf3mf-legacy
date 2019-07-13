@@ -28,7 +28,7 @@ if ($LOGGED) {
 
                 <div id="form" class="login-form form">
 
-                    <form action="./?mode=submitlogin" method="post">
+                    <form action="/?mode=submitlogin" method="post">
 
                         <table id="l-f-table">
                             <tr>
