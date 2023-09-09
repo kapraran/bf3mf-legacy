@@ -1,6 +1,6 @@
 <?php
 
-$MATCH = new Match(); ?>
+$MATCH = new CMatch(); ?>
 <div id="main">
     <div class="mode-title">My matches</div>
 

@@ -9,7 +9,7 @@ if (!is_numeric($MODE_PARS['matchid'])) {
 
 $MODE_PARS['matchid'] = number_format($MODE_PARS['matchid'], 0);
 
-$MATCH = new Match();
+$MATCH = new CMatch();
 
 // update active matches
 $MATCH->check_actives(time() + 3600 * $TIME_MODIFIER);

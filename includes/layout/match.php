@@ -1,9 +1,13 @@
 <?php
 
-$MATCH = new Match();
+$MATCH = new CMatch();
 $match_info = $MATCH->get_match($MODE_PARS['id']);
 $clan_info = $MATCH->clan_info($match_info['clan_id']);
 
+var_dump(!$MATCH->check_if_accepted(
+            $MODE_PARS['id']
+        ) &&
+        !$MATCH->already_challenged($MODE_PARS['id']));
 // Game settings
 $V_team_size = $MATCH->prep_team_size($match_info['tsize']);
 $V_mode = $MATCH->prep_game_mode($match_info['mode']);
@@ -216,9 +220,9 @@ $V_premium = ucfirst($match_info['dlc_own']);
 
           <?php if ($LOGGED) :/* USER LOGGED IN */  ?>
 
-          <?php if (
+          <!--?php if (
                             $_SESSION['id'] == $clan_info['id']
-                        ) :/* CREATOR OF THE MATCH */  ?>
+                        ) :/* CREATOR OF THE MATCH */  ?-->
 
           <tr>
             <td class="label">Match tools</td>
@@ -305,7 +309,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
             </td>
           </tr>
 
-          /* VISITOR OF THE MATCH */ /* MATCH OPPONENT NOT DECIDED YET AND CURRENT USER HAS SENT A CHALLENGE */<?php
+         <?php
                                                                                                                                     /* VISITOR OF THE MATCH */
                                                                                                                                     /* MATCH OPPONENT NOT DECIDED YET AND CURRENT USER HAS SENT A CHALLENGE */
                                                                                                                                     ?>else:<?php
@@ -333,6 +337,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
             </td>
           </tr>
 
+
           <?php elseif (
                                 !$MATCH->check_if_accepted(
                                     $MODE_PARS['id']
@@ -354,7 +359,7 @@ $V_premium = ucfirst($match_info['dlc_own']);
 
           <?php endif; ?>
 
-          <?php endif; ?>
+          <!--?php endif; ?-->
 
           <?php endif; ?>
 

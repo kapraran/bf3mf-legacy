@@ -1,7 +1,7 @@
 <?php
 print_r($MODE_PARS);
 
-$MATCH = new Match();
+$MATCH = new CMatch();
 $start_time = $MATCH->is_real_time(
   $MODE_PARS['start_day'],
   $MODE_PARS['start_month'],
@@ -18,13 +18,13 @@ $end_time = $MATCH->is_real_time(
 );
 $time = time() + $TIME_MODIFIER * 3600;
 
-if ($time - 3600 > $start_time) {
-  redirectHTML('find/error/8');
-}
+// if ($time> $start_time) {
+//   redirectHTML('find/error/8');
+// }
 
-if ($end_time - $start_time > 432000 /* 5 days in seconds */) {
-  redirectHTML('find/error/9');
-}
+// if ($end_time - $start_time > 432000 /* 5 days in seconds */) {
+//   redirectHTML('find/error/9');
+// }
 
 // Create query
 $query = "SELECT * FROM matches WHERE active = 1 AND  ( ( start_time < {$end_time} AND start_time > {$start_time} ) OR ( end_time > {$start_time} AND end_time < {$end_time} ) )";

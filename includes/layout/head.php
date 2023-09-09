@@ -3,6 +3,7 @@
 if ($LOGGED && $_SESSION['country'] == 'none') {
     $c_code = 'GR';
 } elseif ($LOGGED) {
+    var_dump($_SESSION);
     $c_code = $_SESSION['country'];
 } ?>
 <!DOCTYPE HTML>

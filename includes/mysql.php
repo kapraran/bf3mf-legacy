@@ -3,9 +3,9 @@
 class Mysql
 {
   private $username = 'root';
-  private $password = 'root';
-  private $host = '127.0.0.1';
-  private $db = 'bf3mf';
+  private $password = 'CJR02tAszPofF7f0DYHTDppxHNMsjpma';
+  private $host = 'db';
+  private $db = 'php';
   private $link;
 
   public $queries = 0;

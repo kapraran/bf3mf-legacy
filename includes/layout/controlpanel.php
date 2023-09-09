@@ -1,6 +1,6 @@
 <?php
 
-$MATCH = new Match();
+$MATCH = new CMatch();
 $clan_info = $MATCH->clan_info($_SESSION['id']);
 ?>
 

@@ -1,0 +1,28 @@
+version: '3.7'
+
+volumes:
+  db_data:
+  
+services:
+  db:
+    image: mysql:8.0
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pwd
+      MYSQL_DATABASE: php
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+    ports:
+      - '3306:3306'
+
+  app:
+    build: .
+    ports:
+      - '8080:80'
+    links:
+      - db
+
+
+
+#CJR02tAszPofF7f0DYHTDppxHNMsjpma

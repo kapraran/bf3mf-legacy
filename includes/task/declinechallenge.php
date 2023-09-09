@@ -15,7 +15,7 @@ if (!is_numeric($MODE_PARS['cid'])) {
 $MODE_PARS['matchid'] = number_format($MODE_PARS['matchid'], 0);
 $MODE_PARS['cid'] = number_format($MODE_PARS['cid'], 0);
 
-$MATCH = new Match();
+$MATCH = new CMatch();
 
 // get match info
 $match_info = $MATCH->get_match($MODE_PARS['matchid']);

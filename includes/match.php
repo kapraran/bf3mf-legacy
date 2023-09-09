@@ -1,6 +1,6 @@
 <?php
 
-class Match
+class CMatch
 {
   private $C_presets = array(
     'no' => 'Normal',
@@ -253,6 +253,18 @@ class Match
     $r = $MYSQL->query("INSERT INTO challenges
                                                   (match_id,match_clan_id,match_clan_name,from_clan_id,from_clan_name)
                                                     VALUES ({$mid}, {$temp['clan_id']} , '{$temp['clan_name']}' ,{$_SESSION['id']},'{$_SESSION['name']}' )");
+   /* 
+    create table challenges(
+      id int auto_increment primary key,
+      match_id varchar(256),
+      match_clan_id varchar(256),
+      match_clan_name varchar(256),
+      from_clan_id varchar(256),
+      from_clan_name varchar(256),
+      accepted int,
+      rejected int
+    )
+    */
     if (!$r) {
       return false;
     } else {

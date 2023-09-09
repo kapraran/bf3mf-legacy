@@ -1,6 +1,6 @@
 <?php
 
-$MATCH = new Match();
+$MATCH = new CMatch();
 $match_info = $MATCH->get_match($MODE_PARS['id']);
 $clan_info = $MATCH->clan_info($match_info['clan_id']);
 
